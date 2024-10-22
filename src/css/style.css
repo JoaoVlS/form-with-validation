@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    background-image: url(../assets/imagem/bg-repeat.jpg);
+    background-repeat: round;
+    background-size: 100vh;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    min-height: 100vh;
+}
+
+.text {
+    width: 300px;
+    color: #fff;
+}
+
+.text h1 {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 11px;
+}
+
+.text p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 340px;
+    background-color: #fff;
+}
+
+
+.form input,
+textarea {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    width: 298.01px;
+    align-self: center;
+    font-weight: 400;
+    padding: 8.5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.form textarea {
+    height: 100px;
+    margin-bottom: 7px;
+    resize: none;
+}
+
+input::placeholder {
+    color: #A8A8A8;
+    font-weight: 700;
+}
+
+textarea::placeholder {
+    color: #A8A8A8;
+    font-weight: 700;
+}
+
+.form .p-camp-obrigatorio p {
+    font-size: 15px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.form .submit-btn {
+    align-self: center;
+}
+
+.form .submit-btn input {
+    width: 298.01px;
+    height: 40px;
+    color: #fff;
+    background-color: #3CCC87;
+    border: none;
+    cursor: pointer;
+}
+
+.form input:last-child {
+    margin: 0;
+}
+
+.form span.preencher-campo {
+    display: block;
+    font-size: 8px;
+    margin-left: 7px;
+    margin-bottom: 6px;
+    font-weight: 400;
+    color: #F52E2E;
+}
+
+.form span {
+    display: none;
+}
+
+.form input.campo-incorreto,
+textarea.campo-incorreto {
+    margin: 0;
+    border: solid 1px #F52E2E;
+}
+
+.form input.campo-preenchido,
+textarea.campo-preenchido {
+    border: solid 1px #00C22B;
+}
