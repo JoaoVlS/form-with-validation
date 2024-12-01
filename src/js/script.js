@@ -1,39 +1,19 @@
-const form = document.getElementById('form');
-const valorDosInputs = document.querySelectorAll(".input-item");
+const camposFormulario = document.querySelectorAll('.campo')
+const botaoEnviar = document.querySelector('.btn-enviar')
 
-valorDosInputs.forEach(input => {
-    input.addEventListener('change', () => {
+botaoEnviar.addEventListener('click', (e) => { 
+    e.preventDefault()
 
-        const campoObrigatorio = input.nextElementSibling;
-
-        if (input.value.trim() === '') {
-            input.classList.add("campo-incorreto");
-            input.classList.remove("campo-preenchido");
-            campoObrigatorio.classList.add("preencher-campo");
+    camposFormulario.forEach(input => {
+        if  (input.value) {
+            input.classList.add('valido');
+            input.nextElementSibling.classList.remove('mostrar');
         } else {
-            input.classList.remove("campo-incorreto");
-            campoObrigatorio.classList.remove("preencher-campo");
+            input.classList.remove('valido');
+            input.classList.add('erro');
+            input.nextElementSibling.classList.add('mostrar');
         }
     })
-})
-
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    valorDosInputs.forEach(input => {
-
-        const campoObrigatorio = input.nextElementSibling;
-
-        if (input.value.trim() === '') {
-            input.classList.add("campo-incorreto");
-            campoObrigatorio.classList.add("preencher-campo");
-        } else {
-            input.classList.remove("campo-incorreto");
-            input.classList.add("campo-preenchido");
-            campoObrigatorio.classList.remove("preencher-campo");
-        }
-
-    });
-
+    
 })
 

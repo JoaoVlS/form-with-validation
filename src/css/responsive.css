@@ -1,0 +1,24 @@
+@media (max-width: 320px){ 
+    main{
+        margin: 10px;
+        gap: 30px;
+     }
+
+    .text{ 
+        padding: 10px;
+    } 
+
+    .text h1 {
+         font-size: 18px;
+    }
+
+    .form { 
+        width: 290px;
+    }
+}
+
+@media (max-width: 768px){ 
+    main { 
+      flex-direction: column;
+    }
+}

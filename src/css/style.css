@@ -47,7 +47,7 @@ main {
 textarea {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
-    width: 298.01px;
+    width: 100%;
     align-self: center;
     font-weight: 400;
     padding: 8.5px;
@@ -82,22 +82,26 @@ textarea::placeholder {
 
 .form .submit-btn {
     align-self: center;
+    width: 100%;
 }
 
-.form .submit-btn input {
-    width: 298.01px;
+.form .submit-btn .btn-enviar {
+    width: 100%;
     height: 40px;
+    font-size: 15px;
+    font-weight: 700;
     color: #fff;
     background-color: #3CCC87;
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;      
 }
 
 .form input:last-child {
     margin: 0;
 }
 
-.form span.preencher-campo {
+.form span.mostrar{
     display: block;
     font-size: 8px;
     margin-left: 7px;
@@ -110,13 +114,14 @@ textarea::placeholder {
     display: none;
 }
 
-.form input.campo-incorreto,
-textarea.campo-incorreto {
+.form input.erro,
+textarea.erro {
     margin: 0;
     border: solid 1px #F52E2E;
 }
 
-.form input.campo-preenchido,
-textarea.campo-preenchido {
+.form input.valido,
+textarea.valido {
     border: solid 1px #00C22B;
+    margin-bottom: 15px;
 }
